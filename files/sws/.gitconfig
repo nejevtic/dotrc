@@ -1,0 +1,61 @@
+[push]
+        default = simple
+
+[pull]
+        rebase = true
+
+[user]
+	name = Nemanja Jevtic
+	email = nemanja.jevtic@swisssign.com
+
+[color]
+        ui = auto
+
+[core]
+        autocrlf = input
+        safecrlf = true
+        whitespace = trailing-space,space-before-tab,tab-in-indent
+
+[color.grep]
+        context = blue
+        filename = cyan
+        function = yellow
+        linenumber = red
+        match = green
+        separator = magenta
+
+[alias]
+        co = checkout
+        ci = commit
+        st = status
+        br = branch
+        hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+        type = cat-file -t
+        dump = cat-file -p
+        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --date-order
+
+[gitreview]
+        username = nemanja.jevtic
+
+[pack]
+        threads = 0
+
+[diff]
+        renamelimit = 0
+        renames = copies
+        mnemonicprefix = true
+
+[rerere]
+        enabled = true
+        autoupdate = true
+
+[include]
+        path = .gitconfig.local
+
+[commit]
+        template = ~/.git_commit_template
+
+#[http]
+#        sslCert = /path/to/mycert.crt
+#        sslKey = /path/to/mycert.key
+
